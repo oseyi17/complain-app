@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<br>
+    <h2 class="h2">Complain Board</h2><hr>
+    {% for complain in complains %}
+    <div   class="complain">   
+        <h3><a href="{% url 'detail' complain.pk %}" style="text-decoration: none;"><small> Title</small>: {{ complain.title}}</a></h3>
+        <p>Complainer: {{complain.person}} <br> Date: {{ complain.date_added }}</p><hr>
+    </div>
+    {% endfor %}
+{% endblock content %}

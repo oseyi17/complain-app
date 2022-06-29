@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h2 class="h2">Welcome to comPLain</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Choose a title:</label><br>
+        {{ form.title|as_crispy_field }} <br><br>
+        <label>Type complain here:</label><br>
+        {{form.body|as_crispy_field}}<br><br>
+
+        <label><strong>Select what describes you</strong></label><br>
+        {{form.person|as_crispy_field}}     <br>    
+        <input class="btn btn-primary btn-sm" type="submit" value="Complain" />
+    
+    </form>
+{% endblock %}

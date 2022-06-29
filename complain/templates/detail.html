@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <h3>{{ complain.title }}</h3>
+    <p>{{ complain.body }}</p>
+ 
+    <a type="button" href="{% url 'list' %}" {{complain.treated}}> treated</a>
+    <!--
+        <p><a href="{%url 'delete' complain.pk %}">Delete Complain</a></p> 
+    -->
+{% endblock content %}

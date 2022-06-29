@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="h2">Complain Summary</h2><hr>
+{% for item in titles %}
+    {% for k,v in item.items %}
+        {{v}}<br>
+    {% endfor %}
+{% endfor %}
+<hr>
+
+
+
+{% endblock content %}
